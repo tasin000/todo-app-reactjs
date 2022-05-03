@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Header/Header';
 import TodoInfo from '../TodoInfo/TodoInfo';
+import Todos from '../Todos/Todos';
 import './Home.css';
 
 const Home = () => {
@@ -13,6 +14,10 @@ const Home = () => {
                <main>
                     <section id="todo-info">
                          <TodoInfo />
+                    </section>
+
+                    <section id="todos">
+                         <Todos />
                     </section>
                </main>
           </div>

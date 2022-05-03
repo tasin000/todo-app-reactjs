@@ -1,0 +1,45 @@
+.todo {
+  background-color: #1f1e1f;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-title {
+  font-size: 25px;
+  line-height: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.todo-desc {
+  font-size: 18px;
+  font-weight: 500;
+  color: #929092;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  margin: 5px 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.check {
+  color: #008000;
+}
+
+.delete {
+  color: #ff0000;
+}

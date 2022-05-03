@@ -1,4 +1,9 @@
 .home{
-     background-color: #3C3B3C;
+     background: #3C3B3C;
+     background-size: cover;
      min-height: 100vh;
+}
+
+#todo-info, #todos{
+     margin: 15px 10px;
 }

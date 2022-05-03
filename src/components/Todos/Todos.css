@@ -1,0 +1,8 @@
+.todos-container{
+     background-color: #2D2C2D;
+     max-width: 768px;
+     min-height: 56vh;
+     margin: 10px auto;
+     padding: 15px;
+     border-radius: 10px;
+}

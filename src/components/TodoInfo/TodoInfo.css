@@ -20,6 +20,7 @@
 .form-control label{
      color: #fff;
      font-size: 18px;
+     margin: 5px 0;
 }
 
 .form-control input, .form-control textarea{
@@ -54,4 +55,16 @@
 .form-container button:hover{
      color: #fff;
      background-color: #ffa500;
+}
+
+@media screen and (max-width: 768px){
+     .form-control{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+     }
+
+     .form-control input, .form-control textarea{
+          width: 100%;
+     }
 }
