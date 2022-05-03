@@ -4,13 +4,11 @@ import React from 'react';
 import './Todo.css';
 
 const Todo = () => {
-     // const { title, desc } = todoDetail;
-
      return (
           <div className='todo'>
                <div className="todo-details">
-                    <p className='todo-title'>Todo app</p>
-                    <p className='todo-desc'>Hello welcome to todo app</p>
+                    <p className='todo-title'></p>
+                    <p className='todo-desc'></p>
                </div>
 
                <div className="icons">
