@@ -2,6 +2,7 @@
      background: #3C3B3C;
      background-size: cover;
      min-height: 100vh;
+     padding: 10px;
 }
 
 #todo-info, #todos{
