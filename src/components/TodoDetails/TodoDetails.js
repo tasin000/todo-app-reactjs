@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import './TodoInfo.css';
+import './TodoDetails.css';
 
-const TodoInfo = ({todoDetails, handleChange, handleSubmit}) => {
+const TodoDetails = ({todoDetails, handleChange, handleSubmit}) => {
      const {title, desc} = todoDetails;
 
      return (
@@ -30,4 +30,4 @@ const TodoInfo = ({todoDetails, handleChange, handleSubmit}) => {
      );
 };
 
-export default TodoInfo;
+export default TodoDetails;

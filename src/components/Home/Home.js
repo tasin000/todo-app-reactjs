@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { v4 as uuidv4 } from "uuid";
 import Header from '../Header/Header';
-import TodoInfo from '../TodoInfo/TodoInfo';
+import TodoDetails from '../TodoDetails/TodoDetails';
 import Todos from '../Todos/Todos';
 import './Home.css';
 
@@ -105,7 +105,7 @@ const Home = () => {
 
                <main>
                     <section id="todo-info">
-                         <TodoInfo todoDetails={todoDetails} todos={todos} handleChange={handleChange} handleSubmit={handleSubmit} />
+                         <TodoDetails todoDetails={todoDetails} todos={todos} handleChange={handleChange} handleSubmit={handleSubmit} />
                     </section>
 
                     <section id="todos">
