@@ -26,25 +26,16 @@ const Home = () => {
      // Add todo to todos
      const handleSubmit = (e) => {
           e.preventDefault();
-          if (title) {
-               setTodoDetails({ title: title, desc: desc });
-               setTodos([...todos, { id: uuidv4(), ...todoDetails }]);
-               Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Your todo has been added',
-                    showConfirmButton: false,
-                    timer: 1500
-               });
-               setTodoDetails({ title: "", desc: "" });
-          } else {
-               setTodoDetails({ title: "", desc: "" });
-               Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Please at least add title of the todo"
-               })
-          }
+          setTodoDetails({ title: title, desc: desc });
+          setTodos([...todos, { id: uuidv4(), ...todoDetails }]);
+          Swal.fire({
+               position: 'top-end',
+               icon: 'success',
+               title: 'Your todo has been added',
+               showConfirmButton: false,
+               timer: 1500
+          });
+          setTodoDetails({ title: "", desc: "" });
      }
 
      // Delete an individual todo

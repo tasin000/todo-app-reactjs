@@ -12,7 +12,7 @@ const TodoDetails = ({ todoDetails, handleChange, handleSubmit }) => {
                     <div className="input-group">
                          <div className="form-control">
                               <label htmlFor="title">Title: </label>
-                              <input type="text" name="title" id="title" value={title} onChange={handleChange} />
+                              <input type="text" name="title" id="title" value={title} onChange={handleChange} required />
                          </div>
 
                          <div className="form-control">
