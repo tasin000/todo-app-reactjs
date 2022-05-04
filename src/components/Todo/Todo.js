@@ -5,8 +5,7 @@ import './Todo.css';
 
 const Todo = ({ todo, deleteTodo }) => {
      const { id, title, desc } = todo;
-     console.log(todo);
-     
+
      return (
           <div className='todo'>
                <div className="todo-details">
