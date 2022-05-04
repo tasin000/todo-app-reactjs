@@ -3,6 +3,7 @@
   background-size: cover;
   min-height: 100vh;
   padding: 10px;
+  position: relative;
 }
 
 #todo-info,

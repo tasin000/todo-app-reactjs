@@ -1,0 +1,29 @@
+.footer-container{
+     background-color: #1B2533;
+     border-radius: 10px;
+     padding: 10px;
+     margin: 110px auto 0px auto;
+     text-align: center;
+}
+
+.footer-container p{
+     color: #fff;
+     font-size: 18px;
+     font-weight: 500;
+}
+
+.footer-container a{
+     text-decoration: none;
+     color: lightgrey;
+     font-weight: 800;
+     transition: all .2s linear;
+}
+
+.footer-container a:hover{
+     text-decoration: underline;
+}
+
+.footer-container strong{
+     color: #ffa500;
+     font-weight: 900;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { v4 as uuidv4 } from "uuid";
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import TodoDetails from '../TodoDetails/TodoDetails';
 import Todos from '../Todos/Todos';
@@ -106,6 +107,10 @@ const Home = () => {
                          <Todos todos={todos} deleteTodo={deleteTodo} clearTodos={clearTodos} />
                     </section>
                </main>
+
+               <footer>
+                    <Footer />
+               </footer>
           </div>
      );
 };
