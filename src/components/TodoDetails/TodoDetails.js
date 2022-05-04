@@ -3,8 +3,8 @@ import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './TodoDetails.css';
 
-const TodoDetails = ({todoDetails, handleChange, handleSubmit}) => {
-     const {title, desc} = todoDetails;
+const TodoDetails = ({ todoDetails, handleChange, handleSubmit }) => {
+     const { title, desc } = todoDetails;
 
      return (
           <form action="" onSubmit={handleSubmit}>
