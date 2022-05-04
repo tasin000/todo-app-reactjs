@@ -5,7 +5,8 @@ import './Todo.css';
 
 const Todo = ({ todo, deleteTodo }) => {
      const { id, title, desc } = todo;
-
+     console.log(todo);
+     
      return (
           <div className='todo'>
                <div className="todo-details">
@@ -15,7 +16,7 @@ const Todo = ({ todo, deleteTodo }) => {
 
                <div className="icons">
                     <div className="icon">
-                         <FontAwesomeIcon icon={faTrashCan} className="delete" />
+                         <FontAwesomeIcon icon={faTrashCan} className="delete" onClick={() => deleteTodo(id)} />
                     </div>
                </div>
           </div>

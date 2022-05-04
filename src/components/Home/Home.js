@@ -19,7 +19,7 @@ const Home = () => {
                setTodoDetails({ title: todoValue, desc });
           } else if (todoProp === "desc") {
                setTodoDetails({ title, desc: todoValue });
-          } else if(!todoValue) {
+          } else if (!todoValue) {
                Swal.fire({
                     icon: 'error',
                     title: 'Invalid input',
@@ -31,26 +31,70 @@ const Home = () => {
      // Add todo to todos
      const handleSubmit = (e) => {
           e.preventDefault();
-          setTodoDetails({ title: title, desc: desc });
-          setTodos([...todos, {id: uuidv4(), ...todoDetails}]);
-          // console.log(todos);
-          setTodoDetails({ title: "", desc: "" });
-          // console.log(todoDetails.id);
-          Swal.fire({
-               position: 'top-end',
-               icon: 'success',
-               title: 'Your todo has been added',
-               showConfirmButton: false,
-               timer: 1500
-          });
+          if (title) {
+               setTodoDetails({ title: title, desc: desc });
+               setTodos([...todos, { id: uuidv4(), ...todoDetails }]);
+               Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your todo has been added',
+                    showConfirmButton: false,
+                    timer: 1500
+               });
+               setTodoDetails({ title: "", desc: "" });
+          } else {
+               setTodoDetails({ title: "", desc: "" });
+               Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Please at least add title of the todo"
+               })
+          }
      }
 
      // Delete an individual todo
      const deleteTodo = todoID => {
-          const index  = todos.findIndex(todo => todo.id === todoID);
-          console.log(todos[index], index);
-          delete todos[index];
-          setTodos([...todos]);
+          const filteredTodos = todos.filter(todo => todo.id !== todoID);
+          Swal.fire({
+               title: 'Are you sure?',
+               text: "You won't be able to revert this!",
+               icon: 'warning',
+               showCancelButton: true,
+               confirmButtonColor: '#3085d6',
+               cancelButtonColor: '#d33',
+               confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+               if (result.isConfirmed) {
+                    setTodos([...filteredTodos]);
+                    Swal.fire({
+                         icon: "success",
+                         title: "Deleted Todo",
+                         text: "Your Todo was Deleted"
+                    })
+               }
+          })
+     }
+
+     // Clear Todos
+     const clearTodos = () => {
+          Swal.fire({
+               title: 'Are you sure?',
+               text: "You won't be able to revert this!",
+               icon: 'warning',
+               showCancelButton: true,
+               confirmButtonColor: '#3085d6',
+               cancelButtonColor: '#d33',
+               confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+               if (result.isConfirmed) {
+                    setTodos([]);
+                    Swal.fire({
+                         icon: "success",
+                         title: "Cleared Todos",
+                         text: "Your Todos List was Cleared"
+                    })
+               }
+          });
      }
 
      return (
@@ -65,7 +109,7 @@ const Home = () => {
                     </section>
 
                     <section id="todos">
-                         <Todos todos={todos} deleteTodo={deleteTodo} />
+                         <Todos todos={todos} deleteTodo={deleteTodo} clearTodos={clearTodos} />
                     </section>
                </main>
           </div>
