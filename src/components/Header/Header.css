@@ -1,9 +1,39 @@
-.header {
-  padding-top: 10px;
+nav{
+  background-color: #2D2C2D;
+  border-radius: 10px;
 }
 
-.header h1 {
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.logo h1{
   color: #fff;
-  font-size: 2rem;
-  text-align: center;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+}
+
+.nav-links a{
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.nav-links .active{
+  font-weight: 800;
+}
+
+@media screen and (max-width: 768px){
+  .nav-bar{
+    flex-direction: column;
+    justify-content: center;
+  }
 }

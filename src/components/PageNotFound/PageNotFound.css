@@ -1,0 +1,41 @@
+.page-not-found {
+  background: #3c3b3c;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.page-not-found-contents{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0;
+}
+
+.page-not-found-contents .main-heading::after{
+  content: "404!";
+  color: #ffa500;
+  font-size: 100px;
+  font-weight: 800;
+}
+
+.page-not-found-contents .heading{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.page-not-found-contents a{
+  text-decoration: underline;
+  font-size: 1.5rem;
+  color: lightgreen;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.page-not-found-contents a svg{
+  margin: 0px 10px;
+}
