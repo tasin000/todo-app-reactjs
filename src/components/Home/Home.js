@@ -19,12 +19,6 @@ const Home = () => {
                setTodoDetails({ title: todoValue, desc });
           } else if (todoProp === "desc") {
                setTodoDetails({ title, desc: todoValue });
-          } else if (!todoValue) {
-               Swal.fire({
-                    icon: 'error',
-                    title: 'Invalid input',
-                    text: 'Please enter valid input'
-               })
           }
      }
 
