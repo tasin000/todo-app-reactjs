@@ -10,15 +10,29 @@
   align-items: center;
 }
 
+.create-todo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.todo-creation{
+  color: #e0ffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
 .todo-title {
   font-size: 25px;
-  line-height: 15px;
+  margin: 0;
   font-weight: 600;
   color: #fff;
 }
 
 .todo-desc {
   font-size: 18px;
+  margin: 10px 0;
   font-weight: 500;
   color: #929092;
 }

@@ -11,6 +11,12 @@ const Home = () => {
      const [todoDetails, setTodoDetails] = useState({ title: "", desc: "" });
      const { title, desc } = todoDetails;
      const [todos, setTodos] = useState([]);
+     const date = new Date();
+     const dd = date.getDate();
+     const mm = date.getMonth() + 1;
+     const yyyy = date.getFullYear();
+     const h = date.getHours();
+     const m = date.getMinutes();
 
      // Store the changed values of input fields
      const handleChange = (e) => {
@@ -27,7 +33,7 @@ const Home = () => {
      const handleSubmit = (e) => {
           e.preventDefault();
           setTodoDetails({ title: title, desc: desc });
-          setTodos([...todos, { id: uuidv4(), ...todoDetails }]);
+          setTodos([...todos, { id: uuidv4(), dateCreated: `${dd}/${mm}/${yyyy}`, timeCreated: `${h}:${m}`, ...todoDetails }]);
           Swal.fire({
                position: 'top-end',
                icon: 'success',

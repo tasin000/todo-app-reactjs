@@ -20,7 +20,7 @@ nav{
 .logo h1{
   color: #fff;
   font-size: 1.7rem;
-  line-height: 1.7rem;
+  margin: 10px 0;
 }
 
 .nav-links a{
