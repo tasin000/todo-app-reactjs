@@ -5,3 +5,12 @@
   padding: 10px;
   position: relative;
 }
+
+.about-container{
+  margin: 10px;
+}
+
+.about-title h3{
+  font-size: 2rem;
+  color: lightcyan;
+}

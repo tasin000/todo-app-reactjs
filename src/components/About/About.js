@@ -1,5 +1,4 @@
 import React from 'react';
-import AboutTodoApp from '../AboutTodoApp/AboutTodoApp';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import './About.css';
@@ -12,7 +11,15 @@ const About = () => {
                </header>
 
                <main>
-                    <AboutTodoApp />
+                    <div className='about-container'>
+                         <div className="about-title">
+                              <h3>About Todo App</h3>
+                         </div>
+
+                         <div className="about-desc">
+                              <p></p>
+                         </div>
+                    </div>
                </main>
 
                <footer>
